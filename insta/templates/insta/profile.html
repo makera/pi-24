@@ -1,0 +1,17 @@
+{% extends 'insta/base.html' %}
+
+{% block footer %}
+<h2>Что-то новое</h2>
+{% include 'insta/form.html' %}
+{% endblock %}
+
+
+{% block content %}
+<h1>Профиль</h1>
+<div>
+    {{ text|title }}
+</div>
+<div>
+    {{ html|safe }}
+</div>
+{% endblock %}

@@ -4,3 +4,11 @@
     {{ form }}
     <input type="submit">
 </form>
+
+<form action="." method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ formset.management_form }}
+    {% for f in formset %}{{ f }}{% endfor %}
+    {{ formset.empty_form }}
+    <input type="submit">
+</form>
